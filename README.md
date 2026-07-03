@@ -11,7 +11,6 @@ CNAME                Custom domain (haphazardsolutions.com) — don't delete
 index.html           Home page
 services.html        Services page
 about.html           About page
-contact.html         Contact page
 _layouts/default.html   The HTML shell every page uses
 _includes/           Reusable header & footer
 assets/css/style.css    All styling (edit :root variables to re-theme)
