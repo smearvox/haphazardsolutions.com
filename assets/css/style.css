@@ -178,6 +178,25 @@ a:hover { color: var(--accent-ink); text-decoration: underline; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin-bottom: .4rem; }
 
+/* ── Services listing ── */
+.svc-groups { columns: 2; column-gap: 3rem; }
+.svc-group { break-inside: avoid; margin-bottom: 1.4rem; }
+.svc-group h3 {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--accent); margin: 0 0 .2rem;
+}
+.svc-list { list-style: none; margin: 0; padding: 0; }
+.svc-list li {
+  padding: .6rem 0; border-top: 1px solid var(--border);
+  line-height: 1.5; color: var(--muted);
+}
+.svc-list li strong { color: var(--ink); font-weight: 650; }
+.svc-list.two-col { columns: 2; column-gap: 3rem; }
+.svc-list.two-col li { break-inside: avoid; }
+@media (max-width: 760px) {
+  .svc-groups, .svc-list.two-col { columns: 1; }
+}
+
 /* ── Contact ── */
 .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: start; }
 .field { margin-bottom: 1rem; }
