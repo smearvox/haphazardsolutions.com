@@ -28,3 +28,8 @@ nav:
 
 # ── Build settings (safe defaults for GitHub Pages) ──
 markdown: kramdown
+
+# No theme. We ship our own layouts, includes, and CSS, so we must override the
+# github-pages gem's default (jekyll-theme-primer) — otherwise Primer's
+# assets/css/style.scss compiles to /assets/css/style.css and clobbers ours.
+theme: null
