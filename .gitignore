@@ -1,0 +1,14 @@
+# Jekyll build output & caches (never commit these)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local Ruby dependencies (if you install Jekyll later)
+Gemfile.lock
+vendor/
+.bundle/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

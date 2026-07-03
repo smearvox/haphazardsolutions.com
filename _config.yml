@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────
+#  Haphazard Solutions — site configuration
+#  Edit the values below; GitHub Pages rebuilds on every push.
+# ─────────────────────────────────────────────────────────────
+
+title:       Haphazard Solutions
+tagline:     Order out of the haphazard
+description: >-
+  Haphazard Solutions is a boutique consultancy that helps teams turn
+  messy, ambiguous problems into clear, dependable outcomes.
+
+# Public contact address shown in the footer & Contact page.
+# TODO: replace with a domain address (e.g. hello@haphazardsolutions.com)
+# once you set up email for the domain — see README.
+email: hello@haphazardsolutions.com
+
+# Your live site address. Used for absolute links, SEO tags, sitemaps.
+url:     "https://haphazardsolutions.com"
+baseurl: ""   # keep empty — the custom domain serves from the root
+
+# Header navigation. Add/remove/reorder freely.
+nav:
+  - name: Home
+    url: /
+  - name: Services
+    url: /services/
+  - name: About
+    url: /about/
+  - name: Contact
+    url: /contact/
+
+# ── Build settings (safe defaults for GitHub Pages) ──
+markdown: kramdown
