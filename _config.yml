@@ -23,6 +23,8 @@ nav:
     url: /
   - name: Services
     url: /services/
+  - name: Research
+    url: /research/
   - name: About
     url: /about/
 

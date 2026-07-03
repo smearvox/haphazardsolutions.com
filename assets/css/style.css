@@ -181,7 +181,7 @@ a:hover { color: var(--accent-ink); text-decoration: underline; }
 /* ── Services listing ── */
 .svc-groups { columns: 2; column-gap: 3rem; }
 .svc-group { break-inside: avoid; margin-bottom: 1.4rem; }
-.svc-group h3 {
+.svc-group h4 {
   font-size: .78rem; text-transform: uppercase; letter-spacing: .07em;
   color: var(--accent); margin: 0 0 .2rem;
 }
@@ -193,6 +193,14 @@ a:hover { color: var(--accent-ink); text-decoration: underline; }
 .svc-list li strong { color: var(--ink); font-weight: 650; }
 .svc-list.two-col { columns: 2; column-gap: 3rem; }
 .svc-list.two-col li { break-inside: avoid; }
+
+/* Practice strands (e.g. Operational Intelligence → Data / Institutional knowledge / AI) */
+.strand + .strand { margin-top: 2.75rem; }
+.strand-title {
+  font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em;
+  margin: 0 0 1.1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border);
+}
+.strand-title .note { font-weight: 500; color: var(--muted); font-size: .8rem; }
 @media (max-width: 760px) {
   .svc-groups, .svc-list.two-col { columns: 1; }
 }
