@@ -1,69 +1,82 @@
 ---
-layout: default
+layout: hs
 permalink: /
 description: Operational intelligence and operational effectiveness consulting. We find what's actually true in your data, operations, and risk — and build the discipline to hold it.
+status_label: SIGNAL // GROUND-TRUTH LOCK
+status_seq: SEQ 0x1F
 ---
 
 <!-- ═══ HERO ═══ -->
-<section class="hero">
-  <div class="container hero-inner">
-    <span class="eyebrow">Consulting</span>
-    <h1>Don't fight chaos: <em>Own</em> it.</h1>
-    <p class="lead">
-      Owning chaos starts with seeing it clearly. We find what's actually true —
-      in your data, your operations, your exposure — and build the discipline to
-      hold it. Ground truth over comfortable narrative, every time.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ '/services/' | relative_url }}">See what we do</a>
-      <a class="btn btn-ghost" href="mailto:{{ site.email }}">Get in touch</a>
+<section class="hs-hero">
+  <div class="hs-hero__main">
+    <div class="hs-eyebrow" style="margin-bottom:34px;">OPERATIONAL INTELLIGENCE &amp; EFFECTIVENESS</div>
+    <h1 class="hs-display">Don't fight <span class="hs-ghost" data-text="chaos">chaos</span>:<br><span class="hs-accent-text">Own</span> it.</h1>
+    <p class="hs-lead" style="max-width:520px; margin-top:34px;">Owning chaos starts with seeing it clearly. We find what's actually true — in your data, your operations, your exposure — and build the discipline to hold it. Ground truth over comfortable narrative, every time.</p>
+    <div class="hs-row" style="margin-top:44px;">
+      <a class="hs-btn hs-btn--primary" href="{{ '/services/' | relative_url }}">SEE&nbsp;WHAT&nbsp;WE&nbsp;DO →</a>
+      <a class="hs-btn hs-btn--ghost" href="mailto:{{ site.email }}">GET&nbsp;IN&nbsp;TOUCH</a>
+    </div>
+  </div>
+  <div class="hs-hero__aside">
+    <div class="hs-readout__row" style="color:var(--hs-label); letter-spacing:0.16em;"><span>EXPOSURE&nbsp;MAP</span><span>±0.02</span></div>
+    <div class="hs-gauge__bars">
+      <span class="hs-bar hs-bar--rise" style="--h:38%"></span>
+      <span class="hs-bar hs-bar--peak" style="--h:72%"></span>
+      <span class="hs-bar hs-bar--dip"  style="--h:54%"></span>
+      <span class="hs-bar hs-bar--peak" style="--h:96%"></span>
+      <span class="hs-bar hs-bar--dip"  style="--h:64%"></span>
+      <span class="hs-bar hs-bar--peak" style="--h:82%"></span>
+      <span class="hs-bar hs-bar--rise" style="--h:30%"></span>
+    </div>
+    <div style="border-top:1px solid var(--hs-border); padding-top:18px;">
+      <div class="hs-readout__row"><span>CONFIDENCE</span><span class="v">0.94</span></div>
+      <div class="hs-readout__row"><span>ASSUMPTIONS</span><span>27&nbsp;TESTED</span></div>
+      <div class="hs-readout__row"><span>NARRATIVE&nbsp;BIAS</span><span class="v">FLAGGED</span></div>
     </div>
   </div>
 </section>
 
 <!-- ═══ WHAT WE DO ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What we do</span>
-      <h2>Two practices, and a research arm.</h2>
-      <p class="muted">
-        Operational intelligence and operational effectiveness — plus a research
-        arm that builds when advice isn't enough. Two decades of doing the work,
-        applied to yours.
-      </p>
+<section class="hs-section">
+  <div class="hs-pagehead" style="margin-bottom:52px; align-items:end;">
+    <div>
+      <div class="hs-eyebrow hs-eyebrow--muted" style="margin-bottom:20px;">WHAT WE DO</div>
+      <h2 class="hs-h2">Two practices, and a research arm.</h2>
     </div>
-
-    <div class="grid grid-3">
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">◈</div>
-        <h3>Operational Intelligence</h3>
-        <p class="muted">Your data, your institutional knowledge, and the AI applied to both — architected, governed, and scrutinized until the conclusions hold.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">⚙</div>
-        <h3>Operational Effectiveness</h3>
-        <p class="muted">Strategy, methods, and resilience, assessed honestly — what fits your organization as it is, and as it means to become.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">◆</div>
-        <h3>Research</h3>
-        <p class="muted">Our R&amp;D arm — open-source work and custom AI builds, each documented in its own Lab.</p>
-        <p><a href="{{ '/research/' | relative_url }}">Explore the Labs →</a></p>
-      </article>
+    <p class="hs-body" style="max-width:360px;">Operational intelligence and operational effectiveness — plus a research arm that builds when advice isn't enough. Two decades of doing the work, applied to yours.</p>
+  </div>
+  <div class="hs-grid hs-grid-3">
+    <div class="hs-card">
+      <div class="hs-card__index">01</div>
+      <div class="hs-mark">◈</div>
+      <h3 class="hs-h3">Operational Intelligence</h3>
+      <p>Your data, your institutional knowledge, and the AI applied to both — architected, governed, and scrutinized until the conclusions hold.</p>
+    </div>
+    <div class="hs-card">
+      <div class="hs-card__index">02</div>
+      <div class="hs-mark">⚙</div>
+      <h3 class="hs-h3">Operational Effectiveness</h3>
+      <p>Strategy, methods, and resilience, assessed honestly — what fits your organization as it is, and as it means to become.</p>
+    </div>
+    <div class="hs-card hs-card--accent">
+      <div class="hs-card__index">03</div>
+      <div class="hs-mark">◆</div>
+      <h3 class="hs-h3">Research</h3>
+      <p style="margin-bottom:20px;">Our R&amp;D arm — open-source work and custom AI builds, each documented in its own Lab.</p>
+      <a class="hs-link" href="{{ '/research/' | relative_url }}">EXPLORE&nbsp;THE&nbsp;LABS →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="cta">
-      <h2>The problems worth solving rarely have tidy answers.</h2>
-      <p>If that's the kind you're facing, describe it. You'll get a direct, unhedged read on how we'd actually approach it.</p>
-      <div class="hero-actions" style="justify-content:center; margin-top:1.5rem;">
-        <a class="btn btn-primary" href="mailto:{{ site.email }}">Get in touch</a>
-        <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About</a>
+<!-- ═══ CLOSING ═══ -->
+<section class="hs-section hs-section--tint">
+  <div class="hs-cta">
+    <h2 class="hs-h2">The problems worth solving rarely have <span class="hs-accent-text">tidy answers.</span></h2>
+    <div>
+      <p class="hs-lead" style="margin-bottom:30px;">If that's the kind you're facing, describe it. You'll get a direct, unhedged read on how we'd actually approach it.</p>
+      <div class="hs-row">
+        <a class="hs-btn hs-btn--primary" href="mailto:{{ site.email }}">GET&nbsp;IN&nbsp;TOUCH</a>
+        <a class="hs-btn hs-btn--ghost" href="{{ '/about/' | relative_url }}">ABOUT</a>
       </div>
     </div>
   </div>

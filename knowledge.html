@@ -1,0 +1,79 @@
+---
+layout: hs
+title: Knowledge Base
+permalink: /knowledge/
+description: A working library of Haphazard Solutions whitepapers — open-licensed research on data, rigor, and operations, free to read.
+status_label: "KNOWLEDGE BASE // LIBRARY"
+status_state: "● INDEXED"
+status_meta: "DOCS = 3"
+status_seq: "SEQ 0x6E"
+---
+
+<!-- HEADER -->
+<header class="hs-section hs-pagehead" style="padding-top:80px; padding-bottom:64px;">
+  <div>
+    <div class="hs-eyebrow" style="margin-bottom:30px;">KNOWLEDGE BASE</div>
+    <h1 class="hs-h1">The <span class="hs-accent-text">library.</span></h1>
+  </div>
+  <p class="hs-lead" style="font-size:16px;">A working repository of whitepapers — research on data, rigor, and operations. Everything here is open-licensed (CC BY-SA 4.0) and free to read. Search runs over the full text of every paper.</p>
+</header>
+
+<!-- SEARCH + LIST -->
+<section class="hs-section">
+  <div class="hs-kbbar">
+    <div class="hs-search-wrap">
+      <span class="hs-search__ico">⌕</span>
+      <input class="hs-search" id="kb-search" type="search" placeholder="Search titles, topics, and full text…" autocomplete="off" aria-label="Search the knowledge base">
+    </div>
+    <div class="hs-kbcount" id="kb-count"><b>{{ site.data.kb | size }}</b> / {{ site.data.kb | size }} DOCUMENTS</div>
+  </div>
+
+  <div id="kb-list" style="margin-top:28px;">
+    {% for doc in site.data.kb %}
+    <article class="hs-doc" data-type="{{ doc.type_slug }}" data-keywords="{{ doc.keywords | escape }}">
+      <div><div class="hs-doc__type">{{ doc.type }}</div><div class="hs-doc__no">{{ doc.id }}</div></div>
+      <div>
+        <div class="hs-doc__title">{{ doc.title | escape }}</div>
+        <div class="hs-doc__abstract">{{ doc.abstract | escape }}</div>
+      </div>
+      <div class="hs-doc__meta">{{ doc.year }} · {{ doc.pages }} pp<br><a class="dl" href="{{ '/kb/' | append: doc.pdf | relative_url }}">PDF · {{ doc.size }} →</a></div>
+    </article>
+    {% endfor %}
+    <div class="hs-empty" id="kb-empty" hidden>NO DOCUMENTS MATCH — TRY A BROADER TERM</div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="hs-section hs-section--tint">
+  <div class="hs-cta">
+    <h2 class="hs-h2">Looking for something that <span class="hs-accent-text">isn't here yet?</span></h2>
+    <div>
+      <p class="hs-lead" style="margin-bottom:30px;">The library grows as the work does. If there's a topic you'd want a straight read on, ask — we may already have notes.</p>
+      <a class="hs-btn hs-btn--primary" href="mailto:{{ site.email }}">REQUEST&nbsp;A&nbsp;TOPIC</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var search = document.getElementById('kb-search');
+    var count  = document.getElementById('kb-count');
+    var empty  = document.getElementById('kb-empty');
+    var docs   = Array.prototype.slice.call(document.querySelectorAll('.hs-doc'));
+    var total  = docs.length;
+    if (!search) return;
+    function apply() {
+      var q = search.value.trim().toLowerCase();
+      var shown = 0;
+      docs.forEach(function (d) {
+        var hay = d.getAttribute('data-keywords') + ' ' + d.textContent.toLowerCase();
+        var show = q === '' || hay.indexOf(q) !== -1;
+        d.hidden = !show;
+        if (show) shown++;
+      });
+      if (empty) empty.hidden = shown !== 0;
+      if (count) count.innerHTML = '<b>' + shown + '</b> / ' + total + ' DOCUMENTS';
+    }
+    search.addEventListener('input', apply);
+  })();
+</script>

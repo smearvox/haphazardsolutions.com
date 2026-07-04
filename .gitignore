@@ -15,3 +15,11 @@ Thumbs.db
 
 # Internal planning docket — not published
 PUNCH.md
+
+# Python KB tooling
+.venv/
+__pycache__/
+*.pyc
+
+# Design agent's working folder — mockups/refactors, not published
+_design/

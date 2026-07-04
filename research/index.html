@@ -1,55 +1,73 @@
 ---
-layout: default
+layout: hs
 title: Research
 permalink: /research/
 description: The Haphazard Solutions Research Hive — open-source and custom AI development, documented project by project in the Labs.
+status_label: "RESEARCH HIVE // R&D ACTIVE"
+status_state: "● BUILDING"
+status_meta: "LABS = 01"
+status_seq: "SEQ 0x3C"
 ---
 
-<section class="hero">
-  <div class="container hero-inner">
-    <span class="eyebrow">Research</span>
-    <h1>The Research Hive.</h1>
-    <p class="lead">
-      Beyond client work, we build. The Research Hive is our standing R&amp;D
-      practice — hands-on AI development, some of it open-sourced, some built as
-      closed systems for a single purpose. It's where advice becomes something
-      that runs.
-    </p>
+<!-- HEADER -->
+<header class="hs-section hs-pagehead" style="padding-top:80px; padding-bottom:70px;">
+  <div>
+    <div class="hs-eyebrow" style="margin-bottom:30px;">RESEARCH</div>
+    <h1 class="hs-h1" style="font-size:66px;">The Research <span class="hs-accent-text">Hive.</span></h1>
   </div>
-</section>
+  <p class="hs-lead" style="font-size:16px;">Beyond client work, we build. The Research Hive is our standing R&amp;D practice — hands-on AI development, some of it open-sourced, some built as closed systems for a single purpose. It's where advice becomes something that runs.</p>
+</header>
 
-<section class="section">
-  <div class="container">
-    <div class="grid grid-2">
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">◇</div>
-        <h3>Open research</h3>
-        <p class="muted">Open-source work on hard problems, published in full — method included, not just the results that flattered us.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">◆</div>
-        <h3>Custom builds</h3>
-        <p class="muted">Closed, purpose-built AI systems, engineered end to end for a single problem that warranted its own tool.</p>
-      </article>
+<!-- TWO MODES -->
+<section class="hs-section">
+  <div class="hs-grid hs-grid-2">
+    <div class="hs-card">
+      <div class="hs-mark hs-mark--lg">◇</div>
+      <h3 class="hs-h3" style="font-size:24px; margin-top:24px;">Open research</h3>
+      <p>Open-source work on hard problems, published in full — method included, not just the results that flattered us.</p>
+    </div>
+    <div class="hs-card hs-card--accent">
+      <div class="hs-mark hs-mark--lg">◆</div>
+      <h3 class="hs-h3" style="font-size:24px; margin-top:24px;">Custom builds</h3>
+      <p>Closed, purpose-built AI systems, engineered end to end for a single problem that warranted its own tool.</p>
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Labs</span>
-      <h2>Projects, each with its own lab notebook.</h2>
-      <p class="muted">Each project runs as a Lab — a working notebook of what we're building, what's holding, and what isn't.</p>
+<!-- LABS -->
+<section class="hs-section">
+  <div class="hs-pagehead" style="margin-bottom:44px;">
+    <div>
+      <div class="hs-eyebrow hs-eyebrow--muted" style="margin-bottom:20px;">LABS</div>
+      <h2 class="hs-h2" style="font-size:40px;">Projects, each with its own lab notebook.</h2>
     </div>
-
-    <div class="grid grid-2">
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">◆</div>
-        <h3><a href="{{ '/research/neuraq/' | relative_url }}">NeuraQ</a></h3>
-        <p class="muted">The neural request queueing and dispatch platform: Intelligent, Adaptive, Essential.</p>
-        <p><a href="{{ '/research/neuraq/' | relative_url }}">Enter the Lab →</a></p>
-      </article>
-    </div>
+    <p class="hs-body" style="max-width:380px;">Each project runs as a Lab — a working notebook of what we're building, what's holding, and what isn't.</p>
   </div>
+
+  <a class="hs-card hs-card--accent" href="{{ '/research/neuraq/' | relative_url }}" style="padding:0; display:block;">
+    <div style="display:grid; grid-template-columns:1.6fr 1fr;">
+      <div style="padding:44px 40px;">
+        <div class="hs-row" style="align-items:center; gap:12px; margin-bottom:24px;">
+          <span class="hs-mark" style="font-size:20px;">◆</span>
+          <span class="hs-label" style="font-size:11px; letter-spacing:0.18em;">LAB 01 · CUSTOM BUILD</span>
+        </div>
+        <h3 class="hs-h2" style="font-size:40px; margin-bottom:16px;">NeuraQ</h3>
+        <p class="hs-lead" style="font-size:17px; margin-bottom:28px;">The neural request queueing and dispatch platform: <span class="hs-accent-text" style="color:var(--hs-text)">Intelligent, Adaptive, Essential.</span></p>
+        <span class="hs-link">ENTER&nbsp;THE&nbsp;LAB →</span>
+      </div>
+      <div style="border-left:1px solid var(--hs-border); padding:44px 34px; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+        <div class="hs-readout__row"><span>STATUS</span><span class="v">ACTIVE</span></div>
+        <div class="hs-readout__row"><span>MODE</span><span>DISPATCH</span></div>
+        <div class="hs-readout__row"><span>NOTEBOOK</span><span class="v">OPEN</span></div>
+        <div class="hs-spark" style="margin-top:8px;">
+          <span class="hs-bar hs-bar--ghost" style="--h:45%"></span>
+          <span class="hs-bar" style="--h:72%"></span>
+          <span class="hs-bar hs-bar--ghost" style="--h:58%"></span>
+          <span class="hs-bar" style="--h:90%"></span>
+          <span class="hs-bar hs-bar--ghost" style="--h:66%"></span>
+          <span class="hs-bar" style="--h:80%"></span>
+        </div>
+      </div>
+    </div>
+  </a>
 </section>

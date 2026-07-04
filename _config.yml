@@ -25,6 +25,8 @@ nav:
     url: /services/
   - name: Research
     url: /research/
+  - name: Knowledge
+    url: /knowledge/
   - name: About
     url: /about/
 

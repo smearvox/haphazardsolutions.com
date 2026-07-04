@@ -1,59 +1,50 @@
 ---
-layout: default
+layout: hs
 title: About
 permalink: /about/
 description: Twenty years of data analytics, architecture, engineering, and research rigor — finding the ground truth and saying it plainly.
+status_label: "OPERATOR // NATE, FOUNDER"
+status_state: "● 20 YRS"
+status_meta: "GROUND-TRUTH DISCIPLINE"
+status_seq: "SEQ 0x4B"
 ---
 
-<section class="hero">
-  <div class="container hero-inner">
-    <span class="eyebrow">About</span>
-    <h1>Twenty years of finding out what's actually true.</h1>
-    <p class="lead">
-      In data, in research, in operations — I find the ground truth and say it
-      plainly, whether or not it's what anyone hoped to hear. That's the entire
-      value on offer here.
-    </p>
+<!-- HEADER -->
+<header class="hs-section">
+  <div class="hs-eyebrow" style="margin-bottom:30px;">ABOUT</div>
+  <h1 class="hs-h1" style="max-width:1000px; font-size:60px;">Twenty years of finding out what's <span class="hs-accent-text">actually true.</span></h1>
+  <div class="hs-split-even" style="margin-top:44px; max-width:1040px;">
+    <p class="hs-lead">In data, in research, in operations — I find the ground truth and say it plainly, whether or not it's what anyone hoped to hear. That's the entire value on offer here.</p>
+    <p class="hs-body" style="font-size:16px;">Most of what goes wrong in an organization goes wrong because someone mistook a signal for the truth beneath it — a dashboard that looks healthy, a study that reads as rigorous, a process everyone agrees is fine. Getting past the signal to what's actually there is the discipline I've spent two decades building. It starts before the first handshake, and it doesn't stop for comfort.</p>
+  </div>
+</header>
+
+<!-- THE RECORD -->
+<section class="hs-section" style="display:grid; grid-template-columns:0.7fr 1.3fr; gap:56px; align-items:start;">
+  <div>
+    <div class="hs-eyebrow hs-eyebrow--muted" style="margin-bottom:20px;">THE RECORD</div>
+    <h2 class="hs-h2" style="font-size:36px;">The record.</h2>
+  </div>
+  <div class="hs-ledger">
+    <div class="hs-ledger__row"><span class="hs-ledger__n">01</span><span class="t" style="font-size:17px;">Twenty years in data analytics, data architecture, and data engineering.</span></div>
+    <div class="hs-ledger__row"><span class="hs-ledger__n">02</span><span class="t" style="font-size:17px;">Practicing what's now called "data science" since before it had the name.</span></div>
+    <div class="hs-ledger__row"><span class="hs-ledger__n">03</span><span class="t" style="font-size:17px;">A master's degree in applied statistics.</span></div>
+    <div class="hs-ledger__row"><span class="hs-ledger__n">04</span><span class="t" style="font-size:17px;">A Six Sigma Black Belt.</span></div>
+    <div class="hs-ledger__row"><span class="hs-ledger__n">05</span><span class="t" style="font-size:17px;">A decade spent across the table from PhDs, showing them — in excruciating detail — where their research and results had failed, so those failures didn't reach a journal with their name attached.</span></div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container prose">
-    <p>
-      Most of what goes wrong in an organization goes wrong because someone
-      mistook a signal for the truth beneath it — a dashboard that looks healthy,
-      a study that reads as rigorous, a process everyone agrees is fine. Getting
-      past the signal to what's actually there is the discipline I've spent two
-      decades building. It starts before the first handshake, and it doesn't stop
-      for comfort.
-    </p>
-
-    <h2>The record</h2>
-    <ul>
-      <li>Twenty years in data analytics, data architecture, and data engineering.</li>
-      <li>Practicing what's now called "data science" since before it had the name.</li>
-      <li>A master's degree in applied statistics.</li>
-      <li>A Six Sigma Black Belt.</li>
-      <li>A decade spent across the table from PhDs, showing them — in excruciating
-        detail — where their research and results had failed, so those failures
-        didn't reach a journal with their name attached.</li>
-    </ul>
-
-    <h2>On working with me</h2>
-    <p>
-      I'm not unfriendly, and I'm not hard to work with. But my friendliness is
-      beside the point. You're not hiring me for rapport — you're hiring me
-      because I can tell the difference between a result that holds and one that
-      only looks like it does, and because I'll tell you which one you have.
-    </p>
-
-    <p class="signature">
-      — Nate, founder
-    </p>
-
-    <p>
-      If that's the kind of help you're after,
-      <a href="mailto:{{ site.email }}">get in touch</a>.
-    </p>
+<!-- ON WORKING WITH ME -->
+<section class="hs-section hs-section--tint" style="display:grid; grid-template-columns:0.7fr 1.3fr; gap:56px; align-items:start;">
+  <div>
+    <div class="hs-eyebrow hs-eyebrow--muted" style="margin-bottom:20px;">ON WORKING WITH ME</div>
+    <div class="hs-row" style="align-items:center; gap:14px; margin-top:36px;">
+      <img src="{{ '/assets/logo-mark.png' | relative_url }}" alt="" style="width:44px; height:44px;">
+      <div class="hs-label" style="font-size:13px; letter-spacing:0.06em; color:var(--hs-muted);">— NATE,<br>FOUNDER</div>
+    </div>
+  </div>
+  <div>
+    <blockquote class="hs-quote" style="margin-bottom:26px;">I'm not unfriendly, and I'm not hard to work with. But my friendliness is beside the point. You're not hiring me for rapport — you're hiring me because I can tell the difference between a result that holds and one that only looks like it does, and because I'll tell you which one you have.</blockquote>
+    <p class="hs-lead">If that's the kind of help you're after, <a class="hs-textlink" href="mailto:{{ site.email }}">get in touch</a>.</p>
   </div>
 </section>

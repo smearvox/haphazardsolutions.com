@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines }}">
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/haphazard.css' | relative_url }}">
+</head>
+<body>
+<div class="hs-page">
+  <article class="hs-shell">
+
+    <div class="hs-status">
+      <span>{{ page.status_label | default: 'SIGNAL // GROUND-TRUTH LOCK' | escape }}</span>
+      <span class="hs-live">{{ page.status_state | default: '● LIVE' | escape }}</span>
+      <span>{{ page.status_meta | default: '41.8781°N · 87.6298°W' | escape }}</span>
+      <span>{{ page.status_seq | default: 'SEQ 0x1F' | escape }}</span>
+    </div>
+
+    <nav class="hs-nav">
+      <a class="hs-nav__brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/logo-mark.png' | relative_url }}" alt="Haphazard Solutions">
+        <span class="hs-nav__wordmark">HAPHAZARD SOLUTIONS</span>
+      </a>
+      <div class="hs-nav__links">
+        {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url or item.url == page.nav_active %} class="is-active"{% endif %}>{{ item.name | upcase }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="hs-footer">
+      <div class="hs-footer__brand">
+        <img src="{{ '/assets/logo-mark.png' | relative_url }}" alt="">
+        <div>
+          <div class="hs-footer__name">HAPHAZARD SOLUTIONS</div>
+          <div class="hs-footer__tag">{{ site.tagline }}</div>
+        </div>
+      </div>
+      <div class="hs-footer__meta">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <div style="margin-top:6px;">© {{ site.time | date: '%Y' }} · ALL RIGHTS RESERVED</div>
+      </div>
+    </footer>
+
+  </article>
+</div>
+</body>
+</html>
