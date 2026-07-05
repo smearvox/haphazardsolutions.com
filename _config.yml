@@ -25,6 +25,11 @@ author: Nathaniel Whitten
 og_image: /assets/og-image.png
 logo:     /assets/logo-mark.png
 
+# Google Analytics 4 measurement ID. Injected only on the production build
+# (see the jekyll.environment guard in _layouts/hs.html), so local dev traffic
+# isn't tracked. Blank it out to disable.
+google_analytics: G-5JCNL44L3Q
+
 # Public profile URLs — uncomment/populate to emit sameAs + card attribution.
 # social:
 #   - https://www.linkedin.com/in/your-handle
