@@ -26,7 +26,7 @@
     <div class="hs-status">
       <span>{{ page.status_label | default: 'SIGNAL // GROUND-TRUTH LOCK' | escape }}</span>
       <span class="hs-live">{{ page.status_state | default: '● LIVE' | escape }}</span>
-      <span>{{ page.status_meta | default: '41.8781°N · 87.6298°W' | escape }}</span>
+      <span>{% if page.kb_count %}DOCS = {{ site.data.kb | size }}{% else %}{{ page.status_meta | default: '41.8781°N · 87.6298°W' | escape }}{% endif %}</span>
       <span>{{ page.status_seq | default: 'SEQ 0x1F' | escape }}</span>
     </div>
 
