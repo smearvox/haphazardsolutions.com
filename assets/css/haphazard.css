@@ -347,9 +347,12 @@ p { margin: 0; }
 .hs-doc {
   display: grid; grid-template-columns: 168px 1fr 190px; gap: 32px; align-items: center;
   padding: 26px 4px; border-top: 1px solid var(--hs-border); transition: background .15s;
+  position: relative; cursor: pointer;
 }
 .hs-doc:last-child { border-bottom: 1px solid var(--hs-border); }
 .hs-doc:hover { background: var(--hs-card); }
+/* Whole-tile click target: the entry/PDF link stretches to cover the row. */
+.hs-doc__meta .dl::after { content: ""; position: absolute; inset: 0; }
 .hs-doc__type { font-family: var(--hs-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--hs-accent); }
 .hs-doc__no   { font-family: var(--hs-mono); font-size: 11px; color: var(--hs-dim); margin-top: 8px; }
 .hs-doc__title { font-size: 19px; font-weight: 600; line-height: 1.3; }
