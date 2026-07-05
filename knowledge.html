@@ -25,10 +25,21 @@ status_seq: "SEQ 0x6E"
       <span class="hs-search__ico">⌕</span>
       <input class="hs-search" id="kb-search" type="search" placeholder="Search titles, topics, and full text…" autocomplete="off" aria-label="Search the knowledge base">
     </div>
-    <div class="hs-kbcount" id="kb-count"><b>{{ site.data.kb | size }}</b> / {{ site.data.kb | size }} DOCUMENTS</div>
+    <div class="hs-kbcount" id="kb-count"><b>{{ site.data.kb | size | plus: site.articles.size }}</b> / {{ site.data.kb | size | plus: site.articles.size }} DOCUMENTS</div>
   </div>
 
   <div id="kb-list" style="margin-top:28px;">
+    {% assign arts = site.articles | sort: 'date' | reverse %}
+    {% for a in arts %}
+    <article class="hs-doc" data-type="article" data-keywords="{{ a.content | strip_html | strip_newlines | downcase | escape }}">
+      <div><div class="hs-doc__type">ARTICLE</div><div class="hs-doc__no">HS-KB-A{{ forloop.index }}</div></div>
+      <div>
+        <div class="hs-doc__title">{{ a.title | escape }}</div>
+        <div class="hs-doc__abstract">{{ a.abstract | default: a.description | escape }}</div>
+      </div>
+      <div class="hs-doc__meta">{{ a.date | date: '%Y' }} · {{ a.content | strip_html | number_of_words | divided_by: 200 | plus: 1 }} MIN READ<br><a class="dl" href="{{ a.url | relative_url }}">READ →</a></div>
+    </article>
+    {% endfor %}
     {% for doc in site.data.kb %}
     <article class="hs-doc" data-type="{{ doc.type_slug }}" data-keywords="{{ doc.keywords | escape }}">
       <div><div class="hs-doc__type">{{ doc.type }}</div><div class="hs-doc__no">{{ doc.id }}</div></div>

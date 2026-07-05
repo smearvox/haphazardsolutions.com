@@ -37,3 +37,21 @@ markdown: kramdown
 # github-pages gem's default (jekyll-theme-primer) — otherwise Primer's
 # assets/css/style.scss compiles to /assets/css/style.css and clobbers ours.
 theme: null
+
+# ── Collections: knowledge-base articles (Markdown → rendered pages) ──
+collections:
+  articles:
+    output: true
+    permalink: /knowledge/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
+      status_label: "KNOWLEDGE // ARTICLE"
+      status_state: "● PUBLISHED"
+      status_meta: "OPEN ACCESS"
+      status_seq: "SEQ 0x7F"
+      nav_active: /knowledge/

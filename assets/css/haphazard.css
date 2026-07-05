@@ -413,3 +413,65 @@ p { margin: 0; }
   .hs-kbbar { grid-template-columns: 1fr; }
   .hs-doc { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* ---------------------------------------------------------------------------
+   PROSE — article bodies (Markdown → HTML). Styles the generic elements
+   kramdown emits so an article reads in the instrument-panel voice.
+   ------------------------------------------------------------------------- */
+.hs-prose { max-width: 720px; color: var(--hs-text-2); font-size: 17px; line-height: 1.75; }
+.hs-prose > :first-child { margin-top: 0; }
+.hs-prose > :last-child { margin-bottom: 0; }
+
+.hs-prose h2 { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: var(--hs-text); line-height: 1.2;  margin: 2.4em 0 0.7em; }
+.hs-prose h3 { font-size: 22px; font-weight: 600; color: var(--hs-text); line-height: 1.3; margin: 2em 0 0.6em; }
+.hs-prose h4 { font-family: var(--hs-mono); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hs-accent); margin: 2em 0 0.5em; }
+
+.hs-prose p  { margin: 0 0 1.3em; }
+.hs-prose strong { color: var(--hs-text); font-weight: 600; }
+.hs-prose a  { color: var(--hs-accent); border-bottom: 1px solid transparent; transition: border-color .15s; }
+.hs-prose a:hover { border-color: var(--hs-accent); }
+
+.hs-prose ul, .hs-prose ol { margin: 0 0 1.3em; padding-left: 1.4em; }
+.hs-prose li { margin-bottom: 0.5em; }
+.hs-prose li::marker { color: var(--hs-accent); }
+
+.hs-prose blockquote {
+  margin: 1.9em 0; padding: 2px 0 2px 28px; border-left: 2px solid var(--hs-border-accent);
+  font-size: 21px; line-height: 1.55; font-weight: 300; color: var(--hs-text);
+}
+.hs-prose blockquote p:last-child { margin-bottom: 0; }
+
+.hs-prose hr { height: 1px; border: 0; background: var(--hs-hairline); margin: 2.6em 0; }
+
+/* inline + block code */
+.hs-prose code { font-family: var(--hs-mono); font-size: 0.86em; color: var(--hs-text); background: var(--hs-card); border: 1px solid var(--hs-border); padding: 2px 6px; }
+.hs-prose .highlighter-rouge, .hs-prose .highlight { margin: 1.7em 0; background: none; }
+.hs-prose pre { margin: 0; padding: 22px 24px; overflow-x: auto; background: #070b11; border: 1px solid var(--hs-border); font-size: 13.5px; line-height: 1.6; }
+.hs-prose pre code { background: none; border: 0; padding: 0; font-size: inherit; color: var(--hs-text-2); }
+
+/* tables — match the site's bordered data tables */
+.hs-prose table { width: 100%; border-collapse: collapse; border: 1px solid var(--hs-border); margin: 1.9em 0; font-size: 15px; }
+.hs-prose thead th { font-family: var(--hs-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--hs-label); text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--hs-border); }
+.hs-prose tbody td { padding: 13px 16px; color: var(--hs-text-2); }
+.hs-prose tbody tr + tr td { border-top: 1px solid var(--hs-hairline); }
+
+/* images + figures */
+.hs-prose img { display: block; max-width: 100%; margin: 1.9em auto; border: 1px solid var(--hs-border); }
+.hs-prose figure { margin: 1.9em 0; }
+.hs-prose figcaption { margin-top: 12px; text-align: center; font-size: 13px; font-style: italic; color: var(--hs-faint); }
+
+/* rouge syntax — dark, palette-matched (subset of common tokens) */
+.hs-prose .highlight .c, .hs-prose .highlight .c1, .hs-prose .highlight .cm, .hs-prose .highlight .cs { color: var(--hs-label); font-style: italic; }
+.hs-prose .highlight .k, .hs-prose .highlight .kd, .hs-prose .highlight .kn, .hs-prose .highlight .kc, .hs-prose .highlight .kr, .hs-prose .highlight .nt { color: var(--hs-accent); }
+.hs-prose .highlight .s, .hs-prose .highlight .s1, .hs-prose .highlight .s2, .hs-prose .highlight .sb, .hs-prose .highlight .se, .hs-prose .highlight .sd { color: #7fd3a3; }
+.hs-prose .highlight .m, .hs-prose .highlight .mi, .hs-prose .highlight .mf, .hs-prose .highlight .il { color: #d9a54a; }
+.hs-prose .highlight .nf, .hs-prose .highlight .nc, .hs-prose .highlight .nb, .hs-prose .highlight .bp { color: #57a5f9; }
+.hs-prose .highlight .n, .hs-prose .highlight .nv, .hs-prose .highlight .nx, .hs-prose .highlight .nn { color: var(--hs-text-2); }
+.hs-prose .highlight .o, .hs-prose .highlight .ow, .hs-prose .highlight .p { color: var(--hs-muted); }
+.hs-prose .highlight .err { color: #ff6b6b; }
+
+@media (max-width: 680px) {
+  .hs-prose { font-size: 16px; }
+  .hs-prose h2 { font-size: 26px; }
+  .hs-prose blockquote { font-size: 19px; }
+}
