@@ -62,3 +62,16 @@ docker rm -f hs-jekyll    # remove container; volume + source untouched
 - DNS is configured at the domain registrar (see the setup notes).
 - For a professional `you@haphazardsolutions.com` address, add an email
   service (e.g. Google Workspace, Fastmail, or Zoho) — separate from hosting.
+
+---
+
+<details>
+<summary>🚪 knock, knock</summary>
+
+> — Knock, knock.
+> — Who's there?
+> — Data.
+> — Data who?
+> — Data-pends how rigorously you asked the question.
+
+</details>
