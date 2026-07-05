@@ -1,0 +1,7 @@
+---
+# Empty front matter → Jekyll processes the Liquid below, then serves this at /robots.txt
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

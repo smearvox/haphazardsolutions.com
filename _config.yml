@@ -18,6 +18,18 @@ email: contact@haphazardsolutions.com
 url:     "https://haphazardsolutions.com"
 baseurl: ""   # keep empty — the custom domain serves from the root
 
+# Byline + structured-data identity.
+author: Nathaniel Whitten
+
+# Preview / branding assets (absolute-ized at render time).
+og_image: /assets/og-image.png
+logo:     /assets/logo-mark.png
+
+# Public profile URLs — uncomment/populate to emit sameAs + card attribution.
+# social:
+#   - https://www.linkedin.com/in/your-handle
+#   - https://github.com/smearvox
+
 # Header navigation. Add/remove/reorder freely.
 nav:
   - name: Home
@@ -34,7 +46,25 @@ nav:
 # ── Build settings (safe defaults for GitHub Pages) ──
 markdown: kramdown
 
-# No theme. We ship our own layouts, includes, and CSS, so we must override the
+# Plugins — must be on the GitHub Pages allowlist.
+plugins:
+  - jekyll-sitemap
+
+# Keep internal notes, tooling, and gem files out of the built site.
+# Note: setting `exclude` REPLACES Jekyll's default list, so the usual
+# Gemfile/vendor entries are repeated here alongside our additions.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - scripts          # Python KB tooling — not site content
+  - README.md        # repo readme; not a site page
+  - CLAUDE.md        # internal notes (also git-ignored)
+  - PUNCH.md         # internal notes (also git-ignored)
+  - RESUME.md        # internal notes (also git-ignored)
+
+# No theme. We ship our own layouts and CSS, so we must override the
 # github-pages gem's default (jekyll-theme-primer) — otherwise Primer's
 # assets/css/style.scss compiles to /assets/css/style.css and clobbers ours.
 theme: null
