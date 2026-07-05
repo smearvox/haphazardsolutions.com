@@ -23,3 +23,7 @@ __pycache__/
 
 # Design agent's working folder — mockups/refactors, not published
 _design/
+
+# Continuity docs — local only, kept out of the public repo
+CLAUDE.md
+RESUME.md
