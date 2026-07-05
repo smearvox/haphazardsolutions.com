@@ -59,6 +59,7 @@ exclude:
   - vendor
   - node_modules
   - scripts          # Python KB tooling — not site content
+  - deploy.bat       # local ship script — not site content
   - README.md        # repo readme; not a site page
   - CLAUDE.md        # internal notes (also git-ignored)
   - PUNCH.md         # internal notes (also git-ignored)
