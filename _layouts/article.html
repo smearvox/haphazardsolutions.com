@@ -21,3 +21,43 @@ layout: hs
 <section class="hs-section hs-section--tint">
   <a class="hs-btn hs-btn--ghost" href="{{ '/knowledge/' | relative_url }}">← BACK&nbsp;TO&nbsp;THE&nbsp;LIBRARY</a>
 </section>
+
+{% if page.mermaid %}
+<script defer src="{{ '/assets/js/mermaid.min.js' | relative_url }}"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    // kramdown emits ```mermaid as <code class="language-mermaid"> inside a
+    // <div class="language-mermaid ...">. Hoist the raw text into a bare
+    // <pre class="mermaid"> node that Mermaid can find and render.
+    document.querySelectorAll('code.language-mermaid').forEach(function (code) {
+      var host = document.createElement('pre');
+      host.className = 'mermaid';
+      host.textContent = code.textContent;
+      var block = code.closest('.language-mermaid') || code.closest('pre') || code;
+      block.parentNode.replaceChild(host, block);
+    });
+    if (!window.mermaid) return;
+    window.mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'strict',
+      theme: 'base',
+      themeVariables: {
+        darkMode: true,
+        background: '#0a0f16',
+        primaryColor: '#0c1420',
+        primaryBorderColor: '#223247',
+        primaryTextColor: '#e7edf4',
+        secondaryColor: '#0a0f16',
+        secondaryBorderColor: '#1a222e',
+        tertiaryColor: '#080b10',
+        tertiaryBorderColor: '#1a222e',
+        lineColor: '#5a6a7e',
+        textColor: '#9aa8b7',
+        fontFamily: 'IBM Plex Sans, system-ui, sans-serif',
+        fontSize: '14px'
+      }
+    });
+    window.mermaid.run({ querySelector: 'pre.mermaid' });
+  });
+</script>
+{% endif %}

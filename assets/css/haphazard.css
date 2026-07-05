@@ -470,6 +470,10 @@ p { margin: 0; }
 .hs-prose .highlight .o, .hs-prose .highlight .ow, .hs-prose .highlight .p { color: var(--hs-muted); }
 .hs-prose .highlight .err { color: #ff6b6b; }
 
+/* Mermaid-rendered diagrams */
+.hs-prose pre.mermaid { background: none; border: 0; padding: 0; margin: 2.4em 0; text-align: center; overflow-x: auto; }
+.hs-prose pre.mermaid svg { max-width: 100%; height: auto; }
+
 @media (max-width: 680px) {
   .hs-prose { font-size: 16px; }
   .hs-prose h2 { font-size: 26px; }
