@@ -1,5 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Haphazard Solutions">
-  <rect width="64" height="64" rx="14" fill="#2f54eb"/>
-  <text x="32" y="43" font-family="Segoe UI, system-ui, -apple-system, sans-serif"
-        font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">HS</text>
+  <defs>
+    <linearGradient id="hsbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef3f9"/>
+      <stop offset="0.55" stop-color="#eef3f9"/>
+      <stop offset="1" stop-color="#2f8ef7"/>
+    </linearGradient>
+    <clipPath id="hsring"><circle cx="32" cy="32" r="22"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#080b10"/>
+  <circle cx="32" cy="32" r="22.5" fill="none" stroke="#2a3a4e" stroke-width="1.4"/>
+  <g clip-path="url(#hsring)" fill="url(#hsbar)">
+    <rect x="16"   y="33" width="5" height="20"/>
+    <rect x="23.5" y="25" width="5" height="28"/>
+    <rect x="31"   y="19" width="5" height="34"/>
+    <rect x="38.5" y="27" width="5" height="26"/>
+    <rect x="46"   y="31" width="5" height="22"/>
+  </g>
 </svg>
