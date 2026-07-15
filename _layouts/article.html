@@ -61,3 +61,23 @@ layout: hs
   });
 </script>
 {% endif %}
+
+{% if page.math %}
+<link rel="stylesheet" href="{{ '/assets/katex/katex.min.css' | relative_url }}">
+<script defer src="{{ '/assets/katex/katex.min.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/katex/contrib/auto-render.min.js' | relative_url }}"></script>
+<script>
+  // kramdown emits inline math as \( \) and display math as \[ \] — KaTeX's
+  // default auto-render delimiters. Typeset only inside the article prose.
+  window.addEventListener('DOMContentLoaded', function () {
+    if (typeof renderMathInElement !== 'function') return;
+    renderMathInElement(document.querySelector('.hs-prose') || document.body, {
+      delimiters: [
+        { left: '\\[', right: '\\]', display: true },
+        { left: '\\(', right: '\\)', display: false }
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+{% endif %}
