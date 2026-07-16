@@ -461,6 +461,7 @@ p { margin: 0; }
 /* images + figures */
 .hs-prose img { display: block; max-width: 100%; margin: 1.9em auto; border: 1px solid var(--hs-border); }
 .hs-prose figure { margin: 1.9em 0; }
+.hs-prose figure img { margin: 0 auto; }
 .hs-prose figcaption { margin-top: 12px; text-align: center; font-size: 13px; font-style: italic; color: var(--hs-faint); }
 
 /* rouge syntax — dark, palette-matched (subset of common tokens) */

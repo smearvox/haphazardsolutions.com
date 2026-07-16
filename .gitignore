@@ -27,3 +27,5 @@ _design/
 # Continuity docs — local only, kept out of the public repo
 CLAUDE.md
 RESUME.md
+
+_intake/

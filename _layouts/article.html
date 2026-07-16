@@ -6,7 +6,7 @@ layout: hs
   <h1 class="hs-h1" style="max-width:900px;">{{ page.title }}</h1>
   {% if page.subtitle %}<p class="hs-lead" style="max-width:760px; margin-top:22px;">{{ page.subtitle }}</p>{% endif %}
   <div class="hs-row" style="gap:26px; margin-top:30px; align-items:center;">
-    <span class="hs-label">NATE, FOUNDER</span>
+    <span class="hs-label">{{ page.byline | default: 'NATE, FOUNDER' }}</span>
     <span class="hs-label">{{ page.date | date: '%B %-d, %Y' | upcase }}</span>
     <span class="hs-label">{{ page.content | strip_html | number_of_words | divided_by: 200 | plus: 1 }} MIN READ</span>
   </div>
